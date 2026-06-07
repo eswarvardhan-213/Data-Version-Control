@@ -1,0 +1,25 @@
+import pandas as pd
+import os
+
+data = {
+    "name": ["John", "Jane", "Jim", "Jill"],
+    "age": [25, 30, 35, 40],
+    "city": ["New York", "Los Angeles", "Chicago", "Houston"]
+}
+
+df = pd.DataFrame(data)
+
+dir = "data"
+
+os.makedirs(dir, exist_ok=True)
+
+file_path = os.path.join(dir, "data.csv")
+
+ 
+
+
+df.to_csv(file_path, index=False)   
+# below code will read the data from the csv file and print it
+df = pd.read_csv(file_path)
+print(df)
+
