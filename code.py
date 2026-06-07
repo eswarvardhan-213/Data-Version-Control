@@ -16,7 +16,15 @@ new_row = {
     "city": "Hyderabad"
 }
 
+
+second_row = {
+    "name": "Eswar",
+    "age": 20,
+    "city": "Hyderabad"
+}
+
 df.loc[len(df)] = new_row
+df.loc[len(df)] = second_row
 
 dir = "data"
 
